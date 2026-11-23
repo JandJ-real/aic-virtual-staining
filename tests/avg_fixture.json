@@ -1,0 +1,233 @@
+{
+  "status": "completed",
+  "updates": 2450,
+  "target": 2450,
+  "points": 10,
+  "sources": [
+    {
+      "update": 245,
+      "file": "tail_01.pt",
+      "sha256": "eefcfac077b775b0fb956aebb1bb3f52e78f95c5bd0777ccb0a826434ed60f2e"
+    },
+    {
+      "update": 490,
+      "file": "tail_02.pt",
+      "sha256": "ca1e02da566d02dc24da99f59bb91421035accf24c78934bc09b9b7328583e1b"
+    },
+    {
+      "update": 735,
+      "file": "tail_03.pt",
+      "sha256": "2b75c364fff1530e22da2a349de7bcb955277b32b66de63a5ba5bb119746b3b6"
+    },
+    {
+      "update": 980,
+      "file": "tail_04.pt",
+      "sha256": "77d2676ae3a457cf655979f5d0ab0036298421238a92dd55b2397315c9cb4e5e"
+    },
+    {
+      "update": 1225,
+      "file": "tail_05.pt",
+      "sha256": "d566833d0659141a99abe1d360241de99f34655eabbcbaf3336a1d30367ec031"
+    },
+    {
+      "update": 1470,
+      "file": "tail_06.pt",
+      "sha256": "0c7648a17d05bf1f86e6e0ad8f65160c83ddb57775459b37b6aafa920467a731"
+    },
+    {
+      "update": 1715,
+      "file": "tail_07.pt",
+      "sha256": "b9ddb10c0a30a2edb1aa004e7926afc61b5c680c28abd953142e3e34f019fbf3"
+    },
+    {
+      "update": 1960,
+      "file": "tail_08.pt",
+      "sha256": "c71dab239af80644c9c5b7bc72d3bef0a9ea98d8bff3bf47489f6ee685d8fa42"
+    },
+    {
+      "update": 2205,
+      "file": "tail_09.pt",
+      "sha256": "1db4c06e70ba077270aaa30dc6cf2c4c502ae13474002b163a588cdb1d96dace"
+    },
+    {
+      "update": 2450,
+      "file": "tail_10.pt",
+      "sha256": "436ca7f12c06b2789ea2762f07380881364e6de0ad54732831eb0e05777277fc"
+    }
+  ],
+  "last_gradient_norm": 0.5979893803596497,
+  "seconds": 9680.949056528509,
+  "sha256": "042816bbab9fd844738f68348f12b761ba0e87c0ce703de3b541d63a83e88922",
+  "independent_validation": null,
+  "validation_score": null,
+  "final_candidate": "predeclared AVG10",
+  "contract": {
+    "method": "M23_full14_AVG_F",
+    "source_contract": {
+      "method": "M23_full14",
+      "split": "FULL",
+      "seed": 2026,
+      "initialization": "fresh public Gaussian Restormer; no SSL or old supervised weights",
+      "official_Train_counts": {
+        "colon": 6296,
+        "liver": 2380,
+        "stomach": 1680
+      },
+      "task_markers": {
+        "colon": "CD68",
+        "liver": "CD45RO",
+        "stomach": "CD68"
+      },
+      "independent_validation": null,
+      "former_A_holdout_included": true,
+      "main_updates": 14000,
+      "checkpoint_selection": "fixed last main then AVG10",
+      "sampling": {
+        "colon": 1,
+        "liver": 2,
+        "stomach": 5
+      },
+      "loss_weights": {
+        "colon": 0.1,
+        "liver": 0.2,
+        "stomach": 0.7
+      },
+      "fixed_lr": [
+        [
+          250,
+          1e-05
+        ],
+        [
+          500,
+          5e-05
+        ],
+        [
+          11200,
+          0.0001
+        ],
+        [
+          14000,
+          5e-05
+        ]
+      ],
+      "latent_dropout": 0.05,
+      "activation_checkpointing": true,
+      "AVG": {
+        "updates": 2450,
+        "rounds": 10,
+        "interval": 245,
+        "lr": 1e-05
+      },
+      "test_inference": false,
+      "automatic_resume": false,
+      "start_dependency": "Explicit complete-state migration from original FULL checkpoint<=8000",
+      "source_project": "a8_m23full_r1",
+      "source_contract": {
+        "method": "M23_full",
+        "split": "FULL",
+        "seed": 2026,
+        "initialization": "fresh public Gaussian Restormer; no SSL or old supervised weights",
+        "official_Train_counts": {
+          "colon": 6296,
+          "liver": 2380,
+          "stomach": 1680
+        },
+        "task_markers": {
+          "colon": "CD68",
+          "liver": "CD45RO",
+          "stomach": "CD68"
+        },
+        "independent_validation": null,
+        "former_A_holdout_included": true,
+        "main_updates": 10000,
+        "checkpoint_selection": "fixed last main then AVG10",
+        "sampling": {
+          "colon": 1,
+          "liver": 2,
+          "stomach": 5
+        },
+        "loss_weights": {
+          "colon": 0.1,
+          "liver": 0.2,
+          "stomach": 0.7
+        },
+        "fixed_lr": [
+          [
+            250,
+            1e-05
+          ],
+          [
+            500,
+            5e-05
+          ],
+          [
+            8000,
+            0.0001
+          ],
+          [
+            10000,
+            5e-05
+          ]
+        ],
+        "latent_dropout": 0.05,
+        "activation_checkpointing": true,
+        "AVG": {
+          "updates": 2450,
+          "rounds": 10,
+          "interval": 245,
+          "lr": 1e-05
+        },
+        "test_inference": false,
+        "automatic_resume": false,
+        "start_dependency": "M41 completed main+AVG+final A-Val and actual worker exit",
+        "public": {
+          "base_adapter": {
+            "strict_copied_tensors": 404,
+            "adapted": [
+              "patch_embed.proj.weight: RGB kernel sum",
+              "patch_embed.proj.bias: new learned fan-in uniform, private CPU seed2026",
+              "output.weight: seed2026 initialized single output",
+              "output.bias: new trainable scalar initialized zero"
+            ]
+          },
+          "backbone_tensors_copied": 406,
+          "conditional_parameters": "two cloned seed2026 heads, zero gamma/beta",
+          "public_sha256": "4e2314dae77bb907184da6e2ac625b921491d6b33de26a52512eff1c6bb37fbd",
+          "old_supervised_weights_used": false
+        },
+        "source_index_sha256": "45bb2fccb2ae34e65ad4b75abf1f2d837f38c6249458967e75befedcd2c1b346",
+        "release_sha256": "c68a3c75ecbfa6291cbe132644f47f73b07278fa7dbfc771c272d29d1d6abeb9",
+        "environment": {
+          "gpu": "NVIDIA A800-SXM4-80GB",
+          "torch": "2.4.1+cu121",
+          "cuda": "12.1",
+          "cudnn": 90100,
+          "tf32": false,
+          "deterministic": true,
+          "allocator_fraction": 0.9
+        },
+        "preflight_weights_used": false,
+        "description": "All official Train including former A holdouts. No independent Val, no A score or best selection; fixed last main -> AVG10."
+      },
+      "resume_snapshot_sha256": "82b66d3929c37d544b8e3b7c713569cc46a2f4e8d456f1fdb33f7c75ff42d633",
+      "resumed_step": 750,
+      "source_index_sha256": "45bb2fccb2ae34e65ad4b75abf1f2d837f38c6249458967e75befedcd2c1b346",
+      "release_sha256": "6963a60bff5fe6b48dd6bc548a8a6fe37da5d524352b2574e7a3cd8382046fbe",
+      "environment": {
+        "gpu": "NVIDIA A800-SXM4-80GB",
+        "torch": "2.4.1+cu121",
+        "cuda": "12.1",
+        "cudnn": 90100,
+        "tf32": false,
+        "deterministic": true,
+        "allocator_fraction": 0.9
+      },
+      "preflight_weights_used": false
+    },
+    "anchor_sha256": "fe60d96537fb8851df272acf0f7e11fae3468846f846683844d748d1350c73e0",
+    "anchor_step": 14000,
+    "tail_interval": 245,
+    "tail_rounds": 10,
+    "independent_validation": null
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "reference": "original skimage0.24.0 uint8 RGB channel_axis=-1 API",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "ssim": "Gaussian11, sigma1.5, population covariance, range255",
+  "cases": {
+    "perfect_black": {
+      "raw_ssim": 1.0,
+      "psnr": "inf",
+      "score": 100.0
+    },
+    "black_white": {
+      "raw_ssim": 9.999000099990007e-05,
+      "psnr": 0.0,
+      "score": 0.006999300069993004
+    },
+    "near_black": {
+      "raw_ssim": 0.8667110963012328,
+      "psnr": 48.1308036086791,
+      "score": 89.54825890629374
+    },
+    "constant_64_65": {
+      "raw_ssim": 0.9998799159772087,
+      "psnr": 48.1308036086791,
+      "score": 98.87007628361206
+    },
+    "rgb_ramp_shift": {
+      "raw_ssim": 0.9282590752648122,
+      "psnr": 18.15693976470597,
+      "score": 75.87229912736044
+    },
+    "rgb_channel_permutation": {
+      "raw_ssim": 0.44771409230000775,
+      "psnr": 7.7475830748630425,
+      "score": 35.988536305918366
+    },
+    "edge_strip": {
+      "raw_ssim": 0.9722206531945395,
+      "psnr": 18.164799306236993,
+      "score": 78.95432530735997
+    },
+    "sparse_structures": {
+      "raw_ssim": 0.8541601526693893,
+      "psnr": 19.236249094339726,
+      "score": 71.33296014346108
+    },
+    "negative_ssim": {
+      "raw_ssim": -0.5669955828010935,
+      "psnr": 0.0,
+      "score": 0.0
+    }
+  },
+  "absolute_tolerance": 1e-09,
+  "official_data_used": false
+}

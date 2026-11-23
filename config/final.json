@@ -1,0 +1,78 @@
+{
+  "method": "M23_full14",
+  "split": "FULL",
+  "seed": 2026,
+  "initialization": "fresh public Gaussian Restormer; no SSL or old supervised weights",
+  "official_Train_counts": {
+    "colon": 6296,
+    "liver": 2380,
+    "stomach": 1680
+  },
+  "task_markers": {
+    "colon": "CD68",
+    "liver": "CD45RO",
+    "stomach": "CD68"
+  },
+  "independent_validation": null,
+  "former_A_holdout_included": true,
+  "main_updates": 14000,
+  "checkpoint_selection": "fixed last main then AVG10",
+  "sampling": {
+    "colon": 1,
+    "liver": 2,
+    "stomach": 5
+  },
+  "loss_weights": {
+    "colon": 0.1,
+    "liver": 0.2,
+    "stomach": 0.7
+  },
+  "fixed_lr": [
+    [
+      250,
+      1e-05
+    ],
+    [
+      500,
+      5e-05
+    ],
+    [
+      11200,
+      0.0001
+    ],
+    [
+      14000,
+      5e-05
+    ]
+  ],
+  "latent_dropout": 0.05,
+  "activation_checkpointing": true,
+  "AVG": {
+    "updates": 2450,
+    "rounds": 10,
+    "interval": 245,
+    "lr": 1e-05
+  },
+  "test_inference": false,
+  "automatic_resume": false,
+  "start_dependency": "Explicit complete-state migration from original FULL checkpoint<=8000",
+  "source_project": "a8_m23full_r1",
+  "model": {
+    "dim": 48,
+    "num_blocks": [
+      4,
+      6,
+      6,
+      8
+    ],
+    "heads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "num_refinement_blocks": 4,
+    "ffn_expansion_factor": 2.66,
+    "latent_dropout": 0.05
+  }
+}

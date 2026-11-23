@@ -1,0 +1,5 @@
+{
+  "data": "data/official.zip",
+  "public": "pretrained/gaussian_color_denoising_blind.pth",
+  "model": "checkpoints/final.pt"
+}

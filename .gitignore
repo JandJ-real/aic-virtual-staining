@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+data/
+checkpoints/
+pretrained/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.zip
+*.tgz
+*.tar
+*.tar.gz
+*.partial
